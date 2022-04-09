@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="back-drop">
+            <div class="back-drop-wrapper">
+                <div class="bg-blue">
+                    <img src="" alt="" class="result-gif">
+                    <h1 class="match-result"></h1>
+                    <button type="button" onclick="startGame()" class="restart-btn">Restart</button>
+                </div>
+            </div>
+        </div>
+        <h1 style="padding: 0 10px;">Tic Tac Toe Game! <a href="https://www.youtube.com/watch?v=USEjXNCTvcc" target="_blank">How to play?</a></h1>
+        <select name="playerType" id="playerType" value="computer" class="select-input" onchange="OnChangeOption()">
+            <option value="computer" selected>Computer</option>
+            <option value="friend">Play against a friend</option>
+        </select>
+        <div class="turn-group">
+            <div class="X-turn">
+                X
+            </div>
+            <div style="font-size: 40px;">vs</div>
+            <div class="O-turn">O</div>
+        </div>
+        <div class="grid"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

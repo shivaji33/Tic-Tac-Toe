@@ -1,0 +1,107 @@
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: 'Grape Nuts', cursive;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cell-group {
+  display: flex;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bolder;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.cell-group .cell {
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.cell-group .cell:last-child {
+  border-right-color: transparent;
+}
+
+.cell-group:last-child .cell {
+  border-bottom-color: transparent;
+}
+
+.back-drop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #140e0eba;
+}
+
+.restart-btn {
+  border: 0;
+  outline: 0;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  background-color: hsl(255, 100%, 57%);
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.back-drop-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+.bg-blue{
+background: #FFF;
+padding: 1rem;
+border-radius: 5px;
+border: 1px solid transparent;
+text-align: center;
+}
+
+.turn-group {
+    display: flex;
+    align-items: center;
+}
+
+.O-turn, .X-turn {
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    border-radius:50%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    color: #FFF;
+    background-color: red;
+    font-weight: bolder;
+}
+
+.select-input {
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.select-input:focus-visible {
+  outline: none;
+}

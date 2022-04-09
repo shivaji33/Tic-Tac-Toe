@@ -75,12 +75,12 @@ async function onSelectCell(cell) {
         "green";
       document.querySelector("." + opponent + "-turn").style.backgroundColor =
         "red";
-        await sleep(200);
+        await sleep(100);
       // AI Player turn
       // check if game over or tie condition
       if (!checkMatchWin(board, humanPlayer) && !checkDrawMatch()) {
         // AI Player turn
-        turn(bestMove(), aiPlayer);
+        turn(minimax(board, aiPlayer).index, aiPlayer);
         document.querySelector("." + player + "-turn").style.backgroundColor =
         "red";
       document.querySelector("." + opponent + "-turn").style.backgroundColor =
@@ -145,10 +145,6 @@ function emptyCells() {
 function declareWinner(result) {
   document.querySelector(".back-drop").style.display = "block";
   document.querySelector(".match-result").innerHTML = result;
-}
-
-function bestMove() {
-  return minimax(board, aiPlayer).index;
 }
 
 // MINIMAX ALGO for AI best move

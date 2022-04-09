@@ -75,7 +75,14 @@ async function onSelectCell(cell) {
         "green";
       document.querySelector("." + opponent + "-turn").style.backgroundColor =
         "red";
-        await sleep(100);
+
+        cells.forEach((cell) => {
+          cell.style.pointerEvents = 'none';
+        });
+        await sleep(200);
+        cells.forEach((cell) => {
+          cell.style.removeProperty('pointer-events');
+        });
       // AI Player turn
       // check if game over or tie condition
       if (!checkMatchWin(board, humanPlayer) && !checkDrawMatch()) {
